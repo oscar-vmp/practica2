@@ -86,8 +86,17 @@ Para comprobar con que versión de Spark estamos utilizando, ejecutamos la sigui
           sc.version
 ![Version Spark](/imagenes/z21.jpg "Version Spark")
 
-Con est comprobamos que tenemos bien configurado Zeppelin para realizar el ejercicio.
+Con esto comprobamos que tenemos bien configurado Zeppelin para realizar el ejercicio.
 
 ### Ejercicio
 
+![Parte1 eje](/imagenes/zeje1.jpg "Parte1 eje")
+![Parte2 eje](/imagenes/zeje2.jpg "Parte2 eje")
+![Parte3 eje](/imagenes/zeje3.jpg "Parte3 eje")
+![Parte4 eje](/imagenes/zeje4.jpg "Parte4 eje")
+![Parte5 eje](/imagenes/zeje5.jpg "Parte5 eje")
+![Parte6 eje](/imagenes/zeje6.jpg "Parte6 eje")
+![Parte7 eje](/imagenes/zeje7.jpg "Parte7 eje")
+![Parte8 eje](/imagenes/zeje8.jpg "Parte8 eje")
+![Parte9 eje](/imagenes/zeje9.jpg "Parte9 eje")
 
