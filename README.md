@@ -44,7 +44,7 @@ Lo que tenemos que hacer ahora es crear un nuevo __Interpreters__, entonces tene
 
 ![Interpreters create](/imagenes/z50.jpg "Interpreters create")
 
-Nos aparece una pantalla para configura el nuevo Interpreters
+Nos aparece una pantalla para configurar el nuevo Interpreters
 
 ![Interpreters nuevo](/imagenes/z6.jpg "Interpreters nuevo")
 
