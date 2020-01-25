@@ -77,3 +77,14 @@ A nuestro nuevo Notebook le llamaremos **Numero de registros**, pero lo más imp
 
 ![Note nuevo](/imagenes/z14.jpg "Note nuevo")
 
+Una vez que hemos pulsado sobre **Create**, se nos abre el nuevo Note creado a poder realizar el ejercicio.
+
+![Note editar](/imagenes/z15.jpg "Note editar")
+
+Para comprobar con que versión de Spark estamos utilizando, ejecutamos la siguiente sentencia:
+
+          sc.version
+![Version Spark](/imagenes/z21.jpg "Version Spark")
+
+
+
