@@ -69,4 +69,11 @@ Y pulsamos **OK**, sobre la venta de diálogo que sale a continuación
 
 ![Interpreters dialog](/imagenes/z13.jpg "Interpreters dialog")
 
-No llevará al ventana principal de **Zeppelin**, una vez alli procederemos a crear un nuevo **Notebook**
+Nos llevará al ventana principal de **Zeppelin**, una vez alli procederemos a crear un nuevo **Notebook**
+
+![Notebook nuevo](/imagenes/z141.jpg "Notebook nuevo")
+
+A nuestro nuevo Notebook le llamaremos **Numero de registros**, pero lo más importante es elegir el **Interpreter** que nosotros hemos creado anteriormente llamado **spark2**
+
+![Note nuevo](/imagenes/z14.jpg "Note nuevo")
+
