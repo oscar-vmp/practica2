@@ -86,5 +86,8 @@ Para comprobar con que versión de Spark estamos utilizando, ejecutamos la sigui
           sc.version
 ![Version Spark](/imagenes/z21.jpg "Version Spark")
 
+Con est comprobamos que tenemos bien configurado Zeppelin para realizar el ejercicio.
+
+### Ejercicio
 
 
