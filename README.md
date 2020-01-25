@@ -48,5 +48,14 @@ Nos aparece una pantalla para configurar el nuevo Interpreters
 
 ![Interpreters nuevo](/imagenes/z6.jpg "Interpreters nuevo")
 
+Entonces temos que rellenar los casillas siguientes:
+
+![Interpreters casillas](/imagenes/z7.jpg "Interpreters casillas")
+![Interpreters casillas1](/imagenes/z9.jpg "Interpreters casillas1")
+
+Luego pulsamos a **Save**
+
+![Interpreters save](/imagenes/z10.jpg "Interpreters save")
+
 
 
