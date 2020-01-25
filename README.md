@@ -62,3 +62,9 @@ Entonces nos lleva de nuevo al pantalla de **Interpreters**, y le podemos buscar
 ![Interpreters spark2](/imagenes/z11.jpg "Interpreters spark2")
 
 Para que los cambios se materialicen tenemos que pulsar sobre el boton de **restart**
+
+![Interpreters restart](/imagenes/z111.jpg "Interpreters restart")
+
+Y pulsamos **OK**, sobre la venta de diálogo que sale a continuación
+
+![Interpreters dialog](/imagenes/z13.jpg "Interpreters dialog")
