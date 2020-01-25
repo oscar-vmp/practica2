@@ -25,4 +25,14 @@ Entonces para ver si el programa esta arrancado, vamos al **Firefox** en nuestro
  
 ![Inicio Zeppelin](/imagenes/z1.jpg "Inicio Zeppelin")
 
+Una vez que tenemos arrancado, vamos a proceder a configurar el SPARK que tenemos instalado en nuestra MV, la versión 
+
+      versión 2.4.4
+Para ello tenemos que pulsar en donde pone
+
+![Anonymous](/imagenes/z3.jpg "Anonymous")
+
+Entonces nos saldrá un menú y tenemos que pulsar en la opción **Interpreter**
+
+![Menu](/imagenes/z4.jpg "Menú")
 
