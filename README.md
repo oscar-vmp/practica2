@@ -57,5 +57,8 @@ Luego pulsamos a **Save**
 
 ![Interpreters save](/imagenes/z10.jpg "Interpreters save")
 
+Entonces nos lleva de nuevo al pantalla de **Interpreters**, y le podemos buscar
 
+![Interpreters spark2](/imagenes/z11.jpg "Interpreters spark2")
 
+Para que los cambios se materialicen tenemos que pulsar sobre el boton de **restart**
