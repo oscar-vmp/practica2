@@ -68,3 +68,5 @@ Para que los cambios se materialicen tenemos que pulsar sobre el boton de **rest
 Y pulsamos **OK**, sobre la venta de diálogo que sale a continuación
 
 ![Interpreters dialog](/imagenes/z13.jpg "Interpreters dialog")
+
+No llevará al ventana principal de **Zeppelin**, una vez alli procederemos a crear un nuevo **Notebook**
