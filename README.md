@@ -36,3 +36,13 @@ Entonces nos saldrá un menú y tenemos que pulsar en la opción **Interpreter**
 
 ![Menu](/imagenes/z4.jpg "Menú")
 
+Una vez que estamos en **Interpreters**
+
+![Interpreters](/imagenes/z5.jpg "Interpreters")
+
+Lo que tenemos que hacer ahora es crear un nuevo __Interpreters__, entonces tenemos que pulsar en el botón **Create**
+
+![Interpreters create](/imagenes/z50.jpg "Interpreters create")
+
+
+
