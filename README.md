@@ -29,10 +29,57 @@ Por otra parte, en el terminal que simularemos el CONSUMIDOR, tendremos que ejec
 
 ![Consumidor_sh](/imagenes/consumidor_sh.jpg "Consumidor sh")
 
-Una vez lanzado el fichero por el PRODUCTOR, vemos abajo como lo recoge el fichero CONSUMIDOR:
+Una vez lanzado el fichero por el __PRODUCTOR__, vemos abajo como lo recoge el fichero __CONSUMIDOR__:
 
 ![Resulatdo_envio_sh](/imagenes/resultado_pc_sh.jpg "Resultado del envio por sh")
 
+
+consumer.scsala:
+
+      package kafka
+
+
+      import org.apache.log4j.{Level, Logger}
+      import org.apache.spark.sql.SparkSession
+      import org.apache.spark.sql.types.{IntegerType, StringType, StructType}
+      import org.apache.spark.sql.functions.{from_json,col}
+
+
+      object consumer {
+            def main(args: Array[String]): Unit= {
+                  Logger.getLogger("practica").setLevel(Level.ERROR)
+
+                  val spark = SparkSession.builder().appName("practica").master("local[2]").getOrCreate()
+
+                  val df = spark.readStream
+                              .format("kafka")
+                              .option("kafka.bootstrap.servers","localhost:9092")
+                              .option("subscribe","topicPractica")
+                              .option("sstartingOffsets","earliest")
+                              .load()
+                  df.printSchema()
+                  //castear los datos leidos en formato kafka para convertirlos en Strings
+                  val res=df.selectExpr("CAST(value AS STRING)")
+                  val schema=new StructType()
+                                    .add("id",IntegerType)
+                                    .add("first_name",StringType)
+                                    .add("last_name",StringType)
+                                    .add("email",StringType)
+                                    .add("gender",StringType)
+                                    .add("ip_address",StringType)
+                  import spark.implicits._
+                  val persona=res.select(from_json(col("value"),schema).as("data"))
+                                    .select("data.*")
+                                    .filter("data.first_name not in ( 'Noell','Jeanette')")
+
+                  persona.writeStream
+                              .format("console")
+                              .outputMode("append")
+                              .start()
+                              .awaitTermination()
+
+            }
+      }
 
 ## Parte de Investigación
 
