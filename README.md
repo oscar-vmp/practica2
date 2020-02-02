@@ -1,5 +1,33 @@
 # Practica 2 (Spark Streaming - Kafka)
 
+## Primare parte
+
+Creación de estructura Kafka STREAMING.
+Tenemos un fichero __.json__ que le hemos alojado en la carpeta:
+
+![Carpeta instalacion](/imagenes/carpeta_ficheros.jpg "Carpeta instalación")
+
+Si abrimos el fichero __personal.json__, podemos ver el contenido y que formato:
+
+![Fichero_json](/imagenes/fichero_json.jpg "Fichero json")
+
+Para probar esta primera partes tenemos que abrir dos termianles, una para que simule ser un __PRODUCTOR__ y el otro terminal que simule ser el __CONSUMIDOR__
+
+En parte del PRODUCTOR lo primero que tenemos que hacer es crear un topic, en nuestro caso el *topic* se va a llamar **topicPractica**, al cual el __CONSUMIDOR__ se va subscribir. Para realizar esto, en el terminal del PRODUCER ejecutaremos:
+
+      bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic topicPractica
+
+Una vez tenemos ya creado el topic lo que tenemso que lanzar el fichero __personal.json__ a traver del __kafka-console-producer.sh__ y para ello tenemos que ejecutar la siguiente sentencia:
+
+      cat /home/keepcoding/Documentos/personal.json| bin/kafka-console-producer.sh --broker-list localhost:9092 --topic topicPractica > /dev/null
+
+![Productor_sh](/imagenes/procuctor_sh.jpg "Productor sh")
+
+Por otra parte, en el terminal que simularemos el CONSUMIDOR, tendremos que ejecutar la siguiente sentencia:
+
+      bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic topicPractica --from-beginning
+
+![Consumidor_sh](/imagenes/consumidor_sh.jpg "Consumidor sh")
 
 ## Parte de Investigación
 
