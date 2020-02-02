@@ -21,7 +21,7 @@ Una vez tenemos ya creado el topic lo que tenemso que lanzar el fichero __person
 
       cat /home/keepcoding/Documentos/personal.json| bin/kafka-console-producer.sh --broker-list localhost:9092 --topic topicPractica > /dev/null
 
-![Productor_sh](/imagenes/procuctor_sh.jpg "Productor sh")
+![Productor_sh](/imagenes/productor_sh.jpg "Productor sh")
 
 Por otra parte, en el terminal que simularemos el CONSUMIDOR, tendremos que ejecutar la siguiente sentencia:
 
