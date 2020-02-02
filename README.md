@@ -29,6 +29,11 @@ Por otra parte, en el terminal que simularemos el CONSUMIDOR, tendremos que ejec
 
 ![Consumidor_sh](/imagenes/consumidor_sh.jpg "Consumidor sh")
 
+Una vez lanzado el fichero por el PRODUCTOR, vemos abajo como lo recoge el fichero CONSUMIDOR:
+
+![Resulatdo_envio_sh](/imagenes/resultado_pc_sh.jpg "Resultado del envio por sh")
+
+
 ## Parte de Investigación
 
 En la maquina virtual tenemos instalado Zeppelin, para arrancar el programa tenemos que ir a la carpeta __bin__ donde está instalado el programa.
