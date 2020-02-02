@@ -29,12 +29,12 @@ Por otra parte, en el terminal que simularemos el CONSUMIDOR, tendremos que ejec
 
 ![Consumidor_sh](/imagenes/consumidor_sh.jpg "Consumidor sh")
 
-Una vez lanzado el fichero por el __PRODUCTOR__, vemos abajo como lo recoge el fichero __CONSUMIDOR__:
+Una vez lanzado el fichero por el __PRODUCTOR__, vemos abajo como lo recoge el fichero el __CONSUMIDOR__:
 
 ![Resulatdo_envio_sh](/imagenes/resultado_pc_sh.jpg "Resultado del envio por sh")
 
 
-consumer.scsala:
+__consumer.scala__:
 
       package kafka
 
