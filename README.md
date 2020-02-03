@@ -55,13 +55,13 @@ Lo primero que vamos hacer es un nuevo Proyecto en __IntelliJ__:
 
 ![Proyecto nuevo](/imagenes/proyectto.jpg "Proyecto nuevo")
 
-Para nuestro proyecto que vamos a utizar *Kafka* y *Spark Sql*, necesitamos cargar las siguientes depencias:
+Para nuestro proyecto que vamos a utizar *Kafka* y *Spark Sql*, necesitamos cargar las siguientes dependencias:
 
       libraryDependencies += "org.apache.spark" %% "spark-sql" % "2.4.0"% "Provided"
       libraryDependencies += "org.apache.spark" %% "spark-streaming-kafka-0-10" % "2.4.0"
       libraryDependencies += "org.apache.spark" %% "spark-sql-kafka-0-10" % "2.4.0"
 
-El siguiente paso será crear el fichero código, para que haga de CONSUMIDOR de fichero __personal.json__ enviado por el PRODUCTOR. En nuestro caso el objeto de scala que se ha creado es el siguinte __consumer.scala__:
+El siguiente paso será crear el fichero código, para que haga de CONSUMIDOR de fichero __personal.json__ enviado por el PRODUCTOR. En nuestro caso el objeto de scala que se ha creado es el siguiente __consumer.scala__:
 
       package kafka
 
@@ -82,7 +82,7 @@ El siguiente paso será crear el fichero código, para que haga de CONSUMIDOR de
                               .format("kafka")
                               .option("kafka.bootstrap.servers","localhost:9092")
                               .option("subscribe","topicPractica")
-                              .option("sstartingOffsets","earliest")
+                              .option("startingOffsets","earliest")
                               .load()
                   df.printSchema()
                   //castear los datos leidos en formato kafka para convertirlos en Strings
@@ -107,6 +107,12 @@ El siguiente paso será crear el fichero código, para que haga de CONSUMIDOR de
 
             }
       }
+
+Aquí en el código poemos ver que le CONSUMIDOR est asubscrito a un topic llamado *topicPractica*, y luego para generar lo que la práctica pide, se ha tenido que realizar una *transformación*, en concreto se ha utilizado la transformación **filter**.
+
+![Filtro](/imagenes/filtro.jpg "Transformación aplicada")
+
+
 
 ## Parte de Investigación
 
