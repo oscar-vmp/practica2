@@ -46,7 +46,22 @@ El fichero __personal.json__  tiene la siguente estructura:
 
 ![Fichero_json](/imagenes/fichero_json.jpg "Fichero json")
 
-__consumer.scala__:
+Al resultado que queremos llegar tras ser procesado por el CONSUMER es tener el subconjunto de registros como el siguiente:
+
+![Fichero_json_final](/imagenes/fichero_json_final.jpg "Fichero json final")
+
+
+Lo primero que vamos hacer es un nuevo Proyecto en __IntelliJ__:
+
+![Proyecto nuevo](/imagenes/proyectto.jpg "Proyecto nuevo")
+
+Para nuestro proyecto que vamos a utizar *Kafka* y *Spark Sql*, necesitamos cargar las siguientes depencias:
+
+      libraryDependencies += "org.apache.spark" %% "spark-sql" % "2.4.0"% "Provided"
+      libraryDependencies += "org.apache.spark" %% "spark-streaming-kafka-0-10" % "2.4.0"
+      libraryDependencies += "org.apache.spark" %% "spark-sql-kafka-0-10" % "2.4.0"
+
+El siguiente paso será crear el fichero código, para que haga de CONSUMIDOR de fichero __personal.json__ enviado por el PRODUCTOR. En nuestro caso el objeto de scala que se ha creado es el siguinte __consumer.scala__:
 
       package kafka
 
