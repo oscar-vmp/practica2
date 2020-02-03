@@ -2,7 +2,8 @@
 
 ## Primare parte
 
-Creación de estructura Kafka STREAMING.
+Envio de un ficheco __.json__ mediante Kafka através de la consola (PRODUCTOR) y recoger el resultado del fichero enviado anteriormente desde la consula del (CONSUMIDOR).
+
 Tenemos un fichero __.json__ que le hemos alojado en la carpeta:
 
 ![Carpeta instalacion](/imagenes/carpeta_ficheros.jpg "Carpeta instalación")
@@ -33,6 +34,14 @@ Una vez lanzado el fichero por el __PRODUCTOR__, vemos abajo como lo recoge el f
 
 ![Resulatdo_envio_sh](/imagenes/resultado_pc_sh.jpg "Resultado del envio por sh")
 
+## SEGUNDA PARTE
+
+Debbemos enviar el fichero  __personal.json__ del apartado anterior mediante la consolsa (PRODUCTOR), y luego generar un código en SCALA que lo recoja y realize una transformación, por el cual de los registros que trae el fichero, filtrar los registros que cumplan una condicion.
+El fichero cmo indicamos anteriormente se encuentra ubicado:
+
+      /home/keepcoding/Documentos
+
+![Fichero_json](/imagenes/fichero_json.jpg "Fichero json")
 
 __consumer.scala__:
 
