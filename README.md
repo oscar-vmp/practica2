@@ -244,7 +244,7 @@ Mediante la *acción* **collect**, nos taremos los datos del cluster a nuestro e
 
 ![Parte8 eje](/imagenes/Parte8.jpg "Parte8 eje")
 
-Y posteriormete presentamos el datos de número de registros que nos pedía el enunciado
+Y posteriormente presentamos el datos de número de registros que nos pedía el enunciado
 
 ![Parte9 eje](/imagenes/Parte9.jpg "Parte9 eje")
 
