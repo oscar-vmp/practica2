@@ -112,7 +112,15 @@ Aquí en el código poemos ver que le CONSUMIDOR est asubscrito a un topic llama
 
 ![Filtro](/imagenes/filtro.jpg "Transformación aplicada")
 
+Una vez ya tenemos el CONSUMIDOR creado, la siguiente paso es probar que funciona, para ello ponemos el PRODUCTOR y el CONSUMIDOR a funcionar:
 
+      cat /home/keepcoding/Documentos/personal.json| bin/kafka-console-producer.sh --broker-list localhost:9092 --topic topicPractica > /dev/null     
+
+![Productor_sh](/imagenes/productor_sh.jpg "Productor sh")
+
+El salida que sale del consumidor es la que esperabamos:
+
+![Salida](/imagenes/salida.jpg "Salida")
 
 ## Parte de Investigación
 
