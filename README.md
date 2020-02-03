@@ -211,18 +211,45 @@ Con esto comprobamos que tenemos bien configurado Zeppelin para realizar el ejer
 
 ### Ejercicio
 Vamos ejecutando por partes el código:
-Traemos las librerias necesarias para la práctica
+
+Traemos las *librerias* necesarias para la práctica
+
 ![Parte1 eje](/imagenes/Parte1.jpg "Parte1 eje")
 
-Creamos un SparkSession
+Creamos un *SparkSession*
+
 ![Parte2 eje](/imagenes/Parte2.jpg "Parte2 eje")
+
+Creamos un *schema* para asociarsele posteriormente el DataFrame del fichero que se carge:
+
 ![Parte3 eje](/imagenes/Parte3.jpg "Parte3 eje")
+
+Se procede a cargar el fichero __amigos.csv__ y le asocia el *schema* que se ha creado anteriormente.
+
 ![Parte4 eje](/imagenes/Parte4.jpg "Parte4 eje")
+
+Importamos la librería
+
 ![Parte5 eje](/imagenes/Parte5.jpg "Parte5 eje")
+
+Se crea una tabla con el nombre de *amigos*
+
 ![Parte6 eje](/imagenes/Parte6.jpg "Parte6 eje")
+
+Mediate Spark Sql,se ejecuta la sentencia Sql pata contar los registros de una tabla:
+
 ![Parte7 eje](/imagenes/Parte7.jpg "Parte7 eje")
+
+Mediante la *acción* **collect**, nos taremos los datos del cluster a nuestro equipo
+
 ![Parte8 eje](/imagenes/Parte8.jpg "Parte8 eje")
+
+Y posteriormete presentamos el datos de número de registros que nos pedía el enunciado
+
 ![Parte9 eje](/imagenes/Parte9.jpg "Parte9 eje")
+
+
+El código que se ha ejecutado en Zeppelin ha sido el siguiente:
 
       import org.apache.spark.sql.SparkSession
       import org.apache.spark.sql.types.{IntegerType,StringType,StructType}
