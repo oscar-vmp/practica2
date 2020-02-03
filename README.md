@@ -210,8 +210,11 @@ Para comprobar con que versión de Spark estamos utilizando, ejecutamos la sigui
 Con esto comprobamos que tenemos bien configurado Zeppelin para realizar el ejercicio.
 
 ### Ejercicio
-
+Vamos ejecutando por partes el código:
+Traemos las librerias necesarias para la práctica
 ![Parte1 eje](/imagenes/Parte1.jpg "Parte1 eje")
+
+Creamos un SparkSession
 ![Parte2 eje](/imagenes/Parte2.jpg "Parte2 eje")
 ![Parte3 eje](/imagenes/Parte3.jpg "Parte3 eje")
 ![Parte4 eje](/imagenes/Parte4.jpg "Parte4 eje")
