@@ -37,9 +37,12 @@ Una vez lanzado el fichero por el __PRODUCTOR__, vemos abajo como lo recoge el f
 ## SEGUNDA PARTE
 
 Debbemos enviar el fichero  __personal.json__ del apartado anterior mediante la consolsa (PRODUCTOR), y luego generar un código en SCALA que lo recoja y realize una transformación, por el cual de los registros que trae el fichero, filtrar los registros que cumplan una condicion.
-El fichero cmo indicamos anteriormente se encuentra ubicado:
+El fichero como indicamos anteriormente se encuentra ubicado:
 
       /home/keepcoding/Documentos
+
+
+El fichero __personal.json__  tiene la siguente estructura:
 
 ![Fichero_json](/imagenes/fichero_json.jpg "Fichero json")
 
