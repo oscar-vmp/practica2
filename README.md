@@ -221,3 +221,19 @@ Con esto comprobamos que tenemos bien configurado Zeppelin para realizar el ejer
 ![Parte8 eje](/imagenes/Parte8.jpg "Parte8 eje")
 ![Parte9 eje](/imagenes/Parte9.jpg "Parte9 eje")
 
+      import org.apache.spark.sql.SparkSession
+      import org.apache.spark.sql.types.{IntegerType,StringType,StructType}
+
+      val spark=SparkSession.builder().master("local").appName("MiApp1").getOrCreate()
+
+      val schema=new StructType().add("id",IntegerType,false)
+                        .add("nombre",StringType,true)
+                        .add("edad",IntegerType,true)
+                        .add("amigos",IntegerType,false)
+
+      val df=spark.read.format("csv").schema(schema).option("delimiter",",").load("file:///home/keepcoding/Documentos/amigos.csv")
+      import spark.implicits._
+      df.createOrReplaceTempView("amigos")
+      val numeroFilas = spark.sql("SELECT count(*) FROM amigos")
+      val resultado=numeroFilas.collect()
+      val numero_filas=resultado.head.getLong(0)
