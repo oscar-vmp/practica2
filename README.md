@@ -122,6 +122,58 @@ El salida que sale del consumidor es la que esperabamos:
 
 ![Salida](/imagenes/salida.jpg "Salida")
 
+      package kafka
+
+
+      import org.apache.log4j.{Level, Logger}
+      import org.apache.spark.sql.SparkSession
+      import org.apache.spark.sql.types.{IntegerType, StringType, StructType}
+      import org.apache.spark.sql.functions.{from_json,col,when}
+
+
+      object consumer {
+            def main(args: Array[String]): Unit= {
+                  Logger.getLogger("practica").setLevel(Level.ERROR)
+
+                  val spark = SparkSession.builder().appName("practica").master("local[2]").getOrCreate()
+
+                  val df = spark.readStream
+                              .format("kafka")
+                              .option("kafka.bootstrap.servers","localhost:9092")
+                              .option("subscribe","topicPractica")
+                              .option("startingOffsets","earliest")
+                              .load()
+                  df.printSchema()
+                  //castear los datos leidos en formato kafka para convertirlos en Strings
+                  val res=df.selectExpr("CAST(value AS STRING)")
+                  val schema=new StructType()
+                        .add("id",IntegerType)
+                        .add("first_name",StringType)
+                        .add("last_name",StringType)
+                        .add("email",StringType)
+                        .add("gender",StringType)
+                        .add("ip_address",StringType)
+                  import spark.implicits._
+                  val persona=res.select(from_json(col("value"),schema).as("data"))
+                        .select(    col("data.id"),
+                                    when (col("data.first_name")==="Noell" || col("data.first_name")==="Jeanette","")
+                                          .otherwise(col("data.first_name")).alias("first_name"),
+                                    col("data.last_name"),
+                                    col("data.email"),
+                                    col("data.gender"),
+                                    col("data.ip_address"))
+                        //.filter("data.first_name not in ( 'Noell','Jeanette')")
+
+                  persona.writeStream
+                        .format("console")
+                        .outputMode("append")
+                        .start()
+                        .awaitTermination()
+
+              }
+        }
+
+
 ## Parte de Investigación
 
 En la maquina virtual tenemos instalado Zeppelin, para arrancar el programa tenemos que ir a la carpeta __bin__ donde está instalado el programa.
