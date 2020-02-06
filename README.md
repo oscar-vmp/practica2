@@ -173,6 +173,8 @@ El salida que sale del consumidor es la que esperabamos:
               }
         }
 
+![Opcion segunda](/imagenes/opcion2.jpg "Segunda opción")
+![Resultado segunda opcion](/imagenes/resultado2.jpg "Resultado segunda opción")
 
 ## Parte de Investigación
 
