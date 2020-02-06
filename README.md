@@ -122,6 +122,9 @@ El salida que sale del consumidor es la que esperabamos:
 
 ![Salida](/imagenes/salida.jpg "Salida")
 
+
+Ahora se ha realizado una modificación en el código del CONSUMIDOR, que consite en eliminar dos nombres de la columna _first_name_, dejando todas las filas:
+
       package kafka
 
 
@@ -173,8 +176,14 @@ El salida que sale del consumidor es la que esperabamos:
               }
         }
 
+En este caso, en lugar de realizar una transformación, se ha realizado un _CASE_ en SQL, que en nuetro caso es realizar __WHEN__, como mostramos a continuación:
+
 ![Opcion segunda](/imagenes/opcion2.jpg "Segunda opción")
+
+Posteriormente, si lo ejecutamos el resultado que sale es el que se muestra:
+
 ![Resultado segunda opcion](/imagenes/resultado2.jpg "Resultado segunda opción")
+
 
 ## Parte de Investigación
 
