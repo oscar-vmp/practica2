@@ -123,7 +123,7 @@ El salida que sale del consumidor es la que esperabamos:
 ![Salida](/imagenes/salida.jpg "Salida")
 
 
-Ahora se ha realizado una modificación en el código del CONSUMIDOR, que consite en eliminar dos nombres de la columna _first_name_, dejando todas las filas:
+Ahora se ha realizado una modificación en el código del CONSUMIDOR, que consiste en eliminar dos nombres de la columna **first_name**, dejando todas las filas:
 
       package kafka
 
